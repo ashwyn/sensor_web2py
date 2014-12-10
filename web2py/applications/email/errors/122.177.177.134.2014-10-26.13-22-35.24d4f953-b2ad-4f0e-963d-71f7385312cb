@@ -1,0 +1,539 @@
+(dp1
+S'output'
+p2
+S"<class 'smtplib.SMTPAuthenticationError'> (534, '5.7.14 <https://accounts.google.com/ContinueSignIn?sarp=1&scc=1&plt=AKgnsbsxJ\\n5.7.14 hYMF1WP3CIeVHiS3-soFgmR3DJM3RU5yn73rnyq-1X0YwczfXBpHrEGGNRhSGVpoU9cSOZ\\n5.7.14 NcGSHT-9-_kq2qIxePcUsDOO1ZGPlAySywMl6XnjyaXDzmiZ2WV3z3XxkzBzGyKulz3zlf\\n5.7.14 JKDaVTaBKEVyODaG2PIWXUIN8YLdmbV2yP5fkNXxHqNP_6wNuP8btQm4bb7UOWk-mnRuuc\\n5.7.14 OsTFMgA> Please log in via your web browser and then try again.\\n5.7.14 Learn more at\\n5.7.14 https://support.google.com/mail/bin/answer.py?answer=78754 v2sm8822409qav.44 - gsmtp')"
+p3
+sS'layer'
+p4
+S'/home/ashwyn/sensor/web2py/applications/email/controllers/email.py'
+p5
+sS'code'
+p6
+S'def send():\n\n    sendemail(from_addr    = \'piscriptip@gmail.com\',\n          to_addr_list = [\'ashwyn1092@gmail.com\'],\n          cc_addr_list = [],\n          subject      = \'Howdy\',\n          message      = \'Howdy from a python function\',\n          login        = \'piscriptip@gmail.com\',\n          password     = \'piscriptip14\')\n\n    return "sending...."\n\n\ndef sendemail(from_addr, to_addr_list, cc_addr_list,\n              subject, message,\n              login, password,\n              smtpserver=\'smtp.gmail.com:587\'):\n\n    import smtplib\n\n    header  = \'From: %s\\n\' % from_addr\n    header += \'To: %s\\n\' % \',\'.join(to_addr_list)\n    header += \'Cc: %s\\n\' % \',\'.join(cc_addr_list)\n    header += \'Subject: %s\\n\\n\' % subject\n    message = header + message\n\n    server = smtplib.SMTP(smtpserver)\n    server.starttls()\n    server.login(login,password)\n    problems = server.sendmail(from_addr, to_addr_list, message)\n    server.quit()\n    return problems\nresponse._vars=response._caller(send)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__module__'
+p12
+S"'smtplib'"
+p13
+sS'__getslice__'
+p14
+S"<method-wrapper '__getslice__' of SMTPAuthenticationError object>"
+p15
+sS'__str__'
+p16
+S"<method-wrapper '__str__' of SMTPAuthenticationError object>"
+p17
+sS'__reduce__'
+p18
+S'<built-in method __reduce__ of SMTPAuthenticationError object>'
+p19
+sS'__dict__'
+p20
+S"{'smtp_code': 534, 'smtp_error': '5.7.14 <https://accounts.google.com/ContinueSign.../answer.py?answer=78754 v2sm8822409qav.44 - gsmtp'}"
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of SMTPAuthenticationError object>'
+p23
+sS'__weakref__'
+p24
+S'None'
+p25
+sS'__init__'
+p26
+S"<bound method SMTPAuthenticationError.__init__ o...swer.py?answer=78754 v2sm8822409qav.44 - gsmtp')>"
+p27
+sS'__setattr__'
+p28
+S"<method-wrapper '__setattr__' of SMTPAuthenticationError object>"
+p29
+sS'__reduce_ex__'
+p30
+S'<built-in method __reduce_ex__ of SMTPAuthenticationError object>'
+p31
+sS'__new__'
+p32
+S'<built-in method __new__ of type object>'
+p33
+sS'__format__'
+p34
+S'<built-in method __format__ of SMTPAuthenticationError object>'
+p35
+sS'__class__'
+p36
+S"<class 'smtplib.SMTPAuthenticationError'>"
+p37
+sS'__doc__'
+p38
+S"'Authentication error.\\n\\n    Most probably the ser... username/password\\n    combination provided.\\n    '"
+p39
+sS'smtp_error'
+p40
+S"'5.7.14 <https://accounts.google.com/ContinueSign.../answer.py?answer=78754 v2sm8822409qav.44 - gsmtp'"
+p41
+sS'__getitem__'
+p42
+S"<method-wrapper '__getitem__' of SMTPAuthenticationError object>"
+p43
+sS'__setstate__'
+p44
+S'<built-in method __setstate__ of SMTPAuthenticationError object>'
+p45
+sS'__getattribute__'
+p46
+S"<method-wrapper '__getattribute__' of SMTPAuthenticationError object>"
+p47
+sS'args'
+p48
+S"(534, '5.7.14 <https://accounts.google.com/ContinueSign.../answer.py?answer=78754 v2sm8822409qav.44 - gsmtp')"
+p49
+sS'__subclasshook__'
+p50
+S'<built-in method __subclasshook__ of type object>'
+p51
+sS'__unicode__'
+p52
+S'<built-in method __unicode__ of SMTPAuthenticationError object>'
+p53
+sS'smtp_code'
+p54
+S'534'
+p55
+sS'__delattr__'
+p56
+S"<method-wrapper '__delattr__' of SMTPAuthenticationError object>"
+p57
+sS'__repr__'
+p58
+S"<method-wrapper '__repr__' of SMTPAuthenticationError object>"
+p59
+sS'__hash__'
+p60
+S"<method-wrapper '__hash__' of SMTPAuthenticationError object>"
+p61
+ssS'evalue'
+p62
+S"(534, '5.7.14 <https://accounts.google.com/ContinueSignIn?sarp=1&scc=1&plt=AKgnsbsxJ\\n5.7.14 hYMF1WP3CIeVHiS3-soFgmR3DJM3RU5yn73rnyq-1X0YwczfXBpHrEGGNRhSGVpoU9cSOZ\\n5.7.14 NcGSHT-9-_kq2qIxePcUsDOO1ZGPlAySywMl6XnjyaXDzmiZ2WV3z3XxkzBzGyKulz3zlf\\n5.7.14 JKDaVTaBKEVyODaG2PIWXUIN8YLdmbV2yP5fkNXxHqNP_6wNuP8btQm4bb7UOWk-mnRuuc\\n5.7.14 OsTFMgA> Please log in via your web browser and then try again.\\n5.7.14 Learn more at\\n5.7.14 https://support.google.com/mail/bin/answer.py?answer=78754 v2sm8822409qav.44 - gsmtp')"
+p63
+sS'request'
+p64
+cgluon.html
+XML_unpickle
+p65
+(S's5Q\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top">ajax</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">application</td><td valign="top">:</td><td><div>email</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">args</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">body</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x33100d8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cid</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">client</td><td valign="top">:</td><td><div>122.177.177.134</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">controller</td><td valign="top">:</td><td><div>email</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cookies</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">session_id_admin</td><td valign="top">:</td><td><div>122.177.177.134-ebaf04d3-0a29-4198-8789-8c82265277e8<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id_email</td><td valign="top">:</td><td><div>122.177.177.134-799fc83a-4ddb-495a-a5b3-ff62e3d9d963<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id_welcome</td><td valign="top">:</td><td><div>122.177.177.134-188263f4-1eb2-48e7-a4a2-6e27f81b133a<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">env</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">app_folders</td><td valign="top">:</td><td><div>set([&#x27;/home/ashwyn/sensor/web2py/applications/welcome/&#x27;, &#x27;/home/ashwyn/sensor/web2py/applications/admin/&#x27;, &#x27;/home/ashwyn/sensor/web2py/applications/email/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">applications_parent</td><td valign="top">:</td><td><div>/home/ashwyn/sensor/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">content_length</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">content_type</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">db_sessions</td><td valign="top">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">debugging</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">document_root</td><td valign="top">:</td><td><div>/usr/local/openresty/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">gluon_parent</td><td valign="top">:</td><td><div>/home/ashwyn/sensor/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept</td><td valign="top">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept_encoding</td><td valign="top">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept_language</td><td valign="top">:</td><td><div>en-US,en;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_cache_control</td><td valign="top">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_connection</td><td valign="top">:</td><td><div>close</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_cookie</td><td valign="top">:</td><td><div>session_id_welcome=122.177.177.134-188263f4-1eb2-48e7-a4a2-6e27f81b133a; session_id_email=122.177.177.134-799fc83a-4ddb-495a-a5b3-ff62e3d9d963; __utmt=1; __utma=133430031.288370426.1414295102.1414295102.1414327430.2; __utmb=133430031.36.10.1414327430; __utmc=133430031; __utmz=133430031.1414295102.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); session_id_admin=122.177.177.134-ebaf04d3-0a29-4198-8789-8c82265277e8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_host</td><td valign="top">:</td><td><div>ashwyn.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_user_agent</td><td valign="top">:</td><td><div>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_x_forwarded_for</td><td valign="top">:</td><td><div>122.177.177.134</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_x_real_ip</td><td valign="top">:</td><td><div>122.177.177.134</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">https</td><td valign="top">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_jython</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_pypy</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">local_hosts</td><td valign="top">:</td><td><div><table><tr><td><div>ashwyn.pythonanywhere.com</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>glenn-liveweb1</div></td></tr><tr><td><div>localhost</div></td></tr><tr><td><div>50.19.109.98</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path_info</td><td valign="top">:</td><td><div>/email/email/send</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">query_string</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">remote_addr</td><td valign="top">:</td><td><div>10.225.10.54</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">remote_port</td><td valign="top">:</td><td><div>48237</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">request_method</td><td valign="top">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">request_uri</td><td valign="top">:</td><td><div>/email/email/send</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">script_name</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_name</td><td valign="top">:</td><td><div>ashwyn.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_port</td><td valign="top">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_protocol</td><td valign="top">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uwsgi_node</td><td valign="top">:</td><td><div>glenn-liveweb1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uwsgi_version</td><td valign="top">:</td><td><div>2.0.5.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_path</td><td valign="top">:</td><td><div>/home/ashwyn/sensor/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_version</td><td valign="top">:</td><td><div><table><tr><td><div>2</div></td></tr><tr><td><div>4</div></td></tr><tr><td><div>2</div></td></tr><tr><td><div>stable</div></td></tr><tr><td><div>datetime.datetime(2013, 3, 4, 3, 26, 21)</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_errors</td><td valign="top">:</td><td><div>&lt;uwsgi_file__bin_user_wsgi_wrapper.ErrorLogFile object at 0x248d290&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_file_wrapper</td><td valign="top">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_input</td><td valign="top">:</td><td><div>&lt;uwsgi._Input object at 0x7f0a212c9960&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_multiprocess</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_multithread</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_run_once</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_url_scheme</td><td valign="top">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_version</td><td valign="top">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">extension</td><td valign="top">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">folder</td><td valign="top">:</td><td><div>/home/ashwyn/sensor/web2py/applications/email/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">function</td><td valign="top">:</td><td><div>send</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">get_vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">global_settings</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">app_folders</td><td valign="top">:</td><td><div>set([&#x27;/home/ashwyn/sensor/web2py/applications/welcome/&#x27;, &#x27;/home/ashwyn/sensor/web2py/applications/admin/&#x27;, &#x27;/home/ashwyn/sensor/web2py/applications/email/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">applications_parent</td><td valign="top">:</td><td><div>/home/ashwyn/sensor/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">db_sessions</td><td valign="top">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">debugging</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">gluon_parent</td><td valign="top">:</td><td><div>/home/ashwyn/sensor/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_jython</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_pypy</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">local_hosts</td><td valign="top">:</td><td><div><table><tr><td><div>ashwyn.pythonanywhere.com</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>glenn-liveweb1</div></td></tr><tr><td><div>localhost</div></td></tr><tr><td><div>50.19.109.98</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_version</td><td valign="top">:</td><td><div><table><tr><td><div>2</div></td></tr><tr><td><div>4</div></td></tr><tr><td><div>2</div></td></tr><tr><td><div>stable</div></td></tr><tr><td><div>datetime.datetime(2013, 3, 4, 3, 26, 21)</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_https</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_local</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_restful</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">now</td><td valign="top">:</td><td><div>datetime.datetime(2014, 10, 26, 13, 22, 35, 818777)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">post_vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">raw_args</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">raw_extension</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">url</td><td valign="top">:</td><td><div>/email/email/send</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">utcnow</td><td valign="top">:</td><td><div>datetime.datetime(2014, 10, 26, 13, 22, 35, 818792)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uuid</td><td valign="top">:</td><td><div>email/122.177.177.134.2014-10-26.13-22-35.24d4f953-b2ad-4f0e-963d-71f7385312cb</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">environ</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">CONTENT_LENGTH</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">CONTENT_TYPE</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">DOCUMENT_ROOT</td><td valign="top">:</td><td><div>/usr/local/openresty/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTPS</td><td valign="top">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT</td><td valign="top">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT_ENCODING</td><td valign="top">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT_LANGUAGE</td><td valign="top">:</td><td><div>en-US,en;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_CACHE_CONTROL</td><td valign="top">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_CONNECTION</td><td valign="top">:</td><td><div>close</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_COOKIE</td><td valign="top">:</td><td><div>session_id_welcome=122.177.177.134-188263f4-1eb2-48e7-a4a2-6e27f81b133a; session_id_email=122.177.177.134-799fc83a-4ddb-495a-a5b3-ff62e3d9d963; __utmt=1; __utma=133430031.288370426.1414295102.1414295102.1414327430.2; __utmb=133430031.36.10.1414327430; __utmc=133430031; __utmz=133430031.1414295102.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); session_id_admin=122.177.177.134-ebaf04d3-0a29-4198-8789-8c82265277e8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_HOST</td><td valign="top">:</td><td><div>ashwyn.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_USER_AGENT</td><td valign="top">:</td><td><div>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_X_FORWARDED_FOR</td><td valign="top">:</td><td><div>122.177.177.134</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_X_REAL_IP</td><td valign="top">:</td><td><div>122.177.177.134</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">PATH_INFO</td><td valign="top">:</td><td><div>/email/email/send</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">QUERY_STRING</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REMOTE_ADDR</td><td valign="top">:</td><td><div>10.225.10.54</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REMOTE_PORT</td><td valign="top">:</td><td><div>48237</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REQUEST_METHOD</td><td valign="top">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REQUEST_URI</td><td valign="top">:</td><td><div>/email/email/send</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SCRIPT_NAME</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_NAME</td><td valign="top">:</td><td><div>ashwyn.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_PORT</td><td valign="top">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_PROTOCOL</td><td valign="top">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uwsgi.node</td><td valign="top">:</td><td><div>glenn-liveweb1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uwsgi.version</td><td valign="top">:</td><td><div>2.0.5.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.errors</td><td valign="top">:</td><td><div>&lt;uwsgi_file__bin_user_wsgi_wrapper.ErrorLogFile object at 0x248d290&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.file_wrapper</td><td valign="top">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.input</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x33100d8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.multiprocess</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.multithread</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.run_once</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.url_scheme</td><td valign="top">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.version</td><td valign="top">:</td><td><div>1</div></td></tr></table></div></td></tr></table></div></td></tr></table></div>'
+tRp66
+sS'frames'
+p67
+(lp68
+(dp69
+S'file'
+p70
+S'/home/ashwyn/sensor/web2py/gluon/restricted.py'
+p71
+sS'dump'
+p72
+(dp73
+S'environment'
+p74
+S"{'A': <class 'gluon.html.A'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, 'CENTER': <class 'gluon.html.CENTER'>, 'CLEANUP': <class 'gluon.validators.CLEANUP'>, 'CODE': <class 'gluon.html.CODE'>, ...}"
+p75
+sS'ccode'
+p76
+S'<code object <module> at 0x3325b30, file "/home/...applications/email/controllers/email.py", line 1>'
+p77
+ssS'lnum'
+p78
+I212
+sS'lines'
+p79
+(dp80
+I207
+S'    try:'
+p81
+sI208
+S'        if isinstance(code, types.CodeType):'
+p82
+sI209
+S'            ccode = code'
+p83
+sI210
+S'        else:'
+p84
+sI211
+S'            ccode = compile2(code, layer)'
+p85
+sI212
+S'        exec ccode in environment'
+p86
+sI213
+S'    except HTTP:'
+p87
+sI214
+S'        raise'
+p88
+sI215
+S'    except RestrictedError:'
+p89
+sI216
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p90
+ssS'call'
+p91
+S'(code="def send():\\n\\n    sendemail(from_addr    = \'piscr...n problems\\nresponse._vars=response._caller(send)\\n", environment={\'A\': <class \'gluon.html.A\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, \'CAT\': <class \'gluon.html.CAT\'>, \'CENTER\': <class \'gluon.html.CENTER\'>, \'CLEANUP\': <class \'gluon.validators.CLEANUP\'>, \'CODE\': <class \'gluon.html.CODE\'>, ...}, layer=\'/home/ashwyn/sensor/web2py/applications/email/controllers/email.py\')'
+p92
+sS'func'
+p93
+S'restricted'
+p94
+sa(dp95
+g70
+S'/home/ashwyn/sensor/web2py/applications/email/controllers/email.py'
+p96
+sg72
+(dp97
+sg78
+I33
+sg79
+(dp98
+I32
+S'    return problems'
+p99
+sI23
+S"    header += 'Cc: %s\\n' % ','.join(cc_addr_list)"
+p100
+sI24
+S"    header += 'Subject: %s\\n\\n' % subject"
+p101
+sI25
+S'    message = header + message'
+p102
+sI26
+S''
+sI27
+S'    server = smtplib.SMTP(smtpserver)'
+p103
+sI28
+S'    server.starttls()'
+p104
+sI29
+S'    server.login(login,password)'
+p105
+sI30
+S'    problems = server.sendmail(from_addr, to_addr_list, message)'
+p106
+sI31
+S'    server.quit()'
+p107
+ssg91
+S'()'
+p108
+sg93
+S'<module>'
+p109
+sa(dp110
+g70
+S'/home/ashwyn/sensor/web2py/gluon/globals.py'
+p111
+sg72
+(dp112
+S'self'
+p113
+S'undefined'
+p114
+sS'f'
+S'<function send>'
+p115
+ssg78
+I193
+sg79
+(dp116
+I192
+S'        self._vars = None'
+p117
+sI193
+S'        self._caller = lambda f: f()'
+p118
+sI194
+S'        self._view_environment = None'
+p119
+sI195
+S'        self._custom_commit = None'
+p120
+sI196
+S'        self._custom_rollback = None'
+p121
+sI197
+S''
+sI188
+S'        self.menu = []             # used by the default view layout'
+p122
+sI189
+S'        self.files = []            # used by web2py_ajax.html'
+p123
+sI190
+S'        self.generic_patterns = []  # patterns to allow generic views'
+p124
+sI191
+S"        self.delimiters = ('{{', '}}')"
+p125
+ssg91
+S'(f=<function send>)'
+p126
+sg93
+S'<lambda>'
+p127
+sa(dp128
+g70
+S'/home/ashwyn/sensor/web2py/applications/email/controllers/email.py'
+p129
+sg72
+(dp130
+S'password'
+p131
+g114
+ssg78
+I9
+sg79
+(dp132
+I4
+S"          to_addr_list = ['ashwyn1092@gmail.com'],"
+p133
+sI5
+S'          cc_addr_list = [],'
+p134
+sI6
+S"          subject      = 'Howdy',"
+p135
+sI7
+S"          message      = 'Howdy from a python function',"
+p136
+sI8
+S"          login        = 'piscriptip@gmail.com',"
+p137
+sI9
+S"          password     = 'piscriptip14')"
+p138
+sI10
+S''
+sI11
+S'    return "sending...."'
+p139
+sI12
+S''
+sI13
+S''
+ssg91
+S'()'
+p140
+sg93
+S'send'
+p141
+sa(dp142
+g70
+S'/home/ashwyn/sensor/web2py/applications/email/controllers/email.py'
+p143
+sg72
+(dp144
+S'server.login'
+p145
+S'<bound method SMTP.login of <smtplib.SMTP instance>>'
+p146
+sS'login'
+p147
+S"'piscriptip@gmail.com'"
+p148
+sS'password'
+p149
+S"'piscriptip14'"
+p150
+sS'server'
+p151
+S'<smtplib.SMTP instance>'
+p152
+ssg78
+I29
+sg79
+(dp153
+I32
+S'    return problems'
+p154
+sI23
+S"    header += 'Cc: %s\\n' % ','.join(cc_addr_list)"
+p155
+sI24
+S"    header += 'Subject: %s\\n\\n' % subject"
+p156
+sI25
+S'    message = header + message'
+p157
+sI26
+S''
+sI27
+S'    server = smtplib.SMTP(smtpserver)'
+p158
+sI28
+S'    server.starttls()'
+p159
+sI29
+S'    server.login(login,password)'
+p160
+sI30
+S'    problems = server.sendmail(from_addr, to_addr_list, message)'
+p161
+sI31
+S'    server.quit()'
+p162
+ssg91
+S"(from_addr='piscriptip@gmail.com', to_addr_list=['ashwyn1092@gmail.com'], cc_addr_list=[], subject='Howdy', message='From: piscriptip@gmail.com\\nTo: ashwyn1092@gmail....Cc: \\nSubject: Howdy\\n\\nHowdy from a python function', login='piscriptip@gmail.com', password='piscriptip14', smtpserver='smtp.gmail.com:587')"
+p163
+sg93
+S'sendemail'
+p164
+sa(dp165
+g70
+S'/usr/lib/python2.7/smtplib.py'
+p166
+sg72
+(dp167
+S'resp'
+p168
+S"'5.7.14 <https://accounts.google.com/ContinueSign.../answer.py?answer=78754 v2sm8822409qav.44 - gsmtp'"
+p169
+sS'code'
+p170
+S'534'
+p171
+sS'global SMTPAuthenticationError'
+p172
+S"<class 'smtplib.SMTPAuthenticationError'>"
+p173
+ssg78
+I615
+sg79
+(dp174
+I610
+S'        elif authmethod is None:'
+p175
+sI611
+S'            raise SMTPException("No suitable authentication method found.")'
+p176
+sI612
+S'        if code not in (235, 503):'
+p177
+sI613
+S"            # 235 == 'Authentication successful'"
+p178
+sI614
+S"            # 503 == 'Error: already authenticated'"
+p179
+sI615
+S'            raise SMTPAuthenticationError(code, resp)'
+p180
+sI616
+S'        return (code, resp)'
+p181
+sI617
+S''
+sI618
+S'    def starttls(self, keyfile=None, certfile=None):'
+p182
+sI619
+S'        """Puts the connection to the SMTP server into TLS mode.'
+p183
+ssg91
+S"(self=<smtplib.SMTP instance>, user='piscriptip@gmail.com', password='piscriptip14')"
+p184
+sg93
+S'login'
+p185
+sasS'pyver'
+p186
+S'Python 2.7.5+: /usr/local/bin/uwsgi (prefix: /usr)'
+p187
+sS'session'
+p188
+g65
+(S's\x1a\x00\x00\x00<div><table></table></div>'
+tRp189
+sS'etype'
+p190
+S"<class 'smtplib.SMTPAuthenticationError'>"
+p191
+sS'date'
+p192
+S'Sun Oct 26 13:22:38 2014'
+p193
+sS'response'
+p194
+g65
+(S's\xa2\x10\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top">body</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x3332880&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cookies</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">session_id_email</td><td valign="top">:</td><td><div>122.177.177.134-799fc83a-4ddb-495a-a5b3-ff62e3d9d963<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">delimiters</td><td valign="top">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">files</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">flash</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">generic_patterns</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">headers</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">X-Powered-By</td><td valign="top">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">menu</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">meta</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">models_to_run</td><td valign="top">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^email/\\w+\\.py$</div></td></tr><tr><td><div>^email/send/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">postprocessing</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_cookie_expires</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_data_name</td><td valign="top">:</td><td><div>session_data_email</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_file</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_filename</td><td valign="top">:</td><td><div>/home/ashwyn/sensor/web2py/applications/email/sessions/122.177.177.134-799fc83a-4ddb-495a-a5b3-ff62e3d9d963</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id</td><td valign="top">:</td><td><div>122.177.177.134-799fc83a-4ddb-495a-a5b3-ff62e3d9d963</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id_name</td><td valign="top">:</td><td><div>session_id_email</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_new</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_storage_type</td><td valign="top">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">status</td><td valign="top">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">view</td><td valign="top">:</td><td><div>email/send.html</div></td></tr></table></div>'
+tRp195
+sS'locals'
+p196
+(dp197
+g6
+S'534'
+p198
+sS'resp'
+p199
+S"'5.7.14 <https://accounts.google.com/ContinueSign.../answer.py?answer=78754 v2sm8822409qav.44 - gsmtp'"
+p200
+sS'authmethod'
+p201
+S"'PLAIN'"
+p202
+sS'self'
+p203
+S'<smtplib.SMTP instance>'
+p204
+sS'method'
+p205
+S"'PLAIN'"
+p206
+sS'encode_cram_md5'
+p207
+S'<function encode_cram_md5>'
+p208
+sS'user'
+p209
+S"'piscriptip@gmail.com'"
+p210
+sS'authlist'
+p211
+S"['LOGIN', 'PLAIN', 'XOAUTH', 'XOAUTH2', 'PLAIN-CLIENTTOKEN', 'OAUTHBEARER']"
+p212
+sS'preferred_auths'
+p213
+S"['CRAM-MD5', 'PLAIN', 'LOGIN']"
+p214
+sS'AUTH_LOGIN'
+p215
+S"'LOGIN'"
+p216
+sS'password'
+p217
+S"'piscriptip14'"
+p218
+sS'AUTH_CRAM_MD5'
+p219
+S"'CRAM-MD5'"
+p220
+sS'AUTH_PLAIN'
+p221
+S"'PLAIN'"
+p222
+sS'encode_plain'
+p223
+S'<function encode_plain>'
+p224
+sssS'traceback'
+p225
+S'Traceback (most recent call last):\n  File "/home/ashwyn/sensor/web2py/gluon/restricted.py", line 212, in restricted\n    exec ccode in environment\n  File "/home/ashwyn/sensor/web2py/applications/email/controllers/email.py", line 33, in <module>\n  File "/home/ashwyn/sensor/web2py/gluon/globals.py", line 193, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/ashwyn/sensor/web2py/applications/email/controllers/email.py", line 9, in send\n    password     = \'piscriptip14\')\n  File "/home/ashwyn/sensor/web2py/applications/email/controllers/email.py", line 29, in sendemail\n    server.login(login,password)\n  File "/usr/lib/python2.7/smtplib.py", line 615, in login\n    raise SMTPAuthenticationError(code, resp)\nSMTPAuthenticationError: (534, \'5.7.14 <https://accounts.google.com/ContinueSignIn?sarp=1&scc=1&plt=AKgnsbsxJ\\n5.7.14 hYMF1WP3CIeVHiS3-soFgmR3DJM3RU5yn73rnyq-1X0YwczfXBpHrEGGNRhSGVpoU9cSOZ\\n5.7.14 NcGSHT-9-_kq2qIxePcUsDOO1ZGPlAySywMl6XnjyaXDzmiZ2WV3z3XxkzBzGyKulz3zlf\\n5.7.14 JKDaVTaBKEVyODaG2PIWXUIN8YLdmbV2yP5fkNXxHqNP_6wNuP8btQm4bb7UOWk-mnRuuc\\n5.7.14 OsTFMgA> Please log in via your web browser and then try again.\\n5.7.14 Learn more at\\n5.7.14 https://support.google.com/mail/bin/answer.py?answer=78754 v2sm8822409qav.44 - gsmtp\')\n'
+p226
+s.
